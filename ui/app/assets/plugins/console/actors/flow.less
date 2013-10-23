@@ -1,0 +1,168 @@
+.flow {
+	@width: 27%;
+
+	h3 {
+		text-transform: uppercase;
+	}
+
+	.wrapper {
+		overflow: hidden;
+		font-weight: 700;
+	}
+
+	.source, .destination, .current {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+	.source, .destination {
+		background: #3D4F5C;
+		font-size: 14px;
+		color: #758794;
+		width: @width;
+	}
+	.source { 
+		left: 0;
+	}
+	.destination {
+		right: 0;
+		.top, .title {
+			text-align: right;
+		}
+	}
+
+	.current {
+		left: @width;
+		right: @width;
+		.top, .title {
+			text-align: center;
+		}
+		.title {
+			background: #E4EAEF;
+			color: #2E3D4A;
+		}
+	}
+
+	.top {
+		background: #364550;
+		padding: 10px;
+		height: 50px;
+		h1 {
+			font-size: 14px;
+			line-height: 30px;
+		}
+		.button {
+			background: url(/public/images/icons/flow-navigation.png) 4px 6px no-repeat;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			&.left { background-position-x: 4px; }
+			&.right { background-position-x: -112px; }
+			&.up { background-position-x: -73px; }
+			&.reverse { background-position-x: -32px; }
+			&.search { background-position-x: -142px; }
+
+			&:hover {background-position-y: -34px;}
+		}
+	}
+	.source .top .button { 
+		float: right;
+	}
+	.destination .top .button { 
+		float: left;
+	}
+
+
+
+	.title {
+		background: #627886;
+		color: #fff;
+		padding: 10px;
+		height: 70px;
+		h2 {
+			font-size: 22px;
+			line-height: 50px;
+		}
+	}
+
+	.path {
+		background: #364550;
+		padding: 10px;
+		color: #EA4E52;
+		border-bottom: 1px solid #2B3740;
+		li {
+			display: inline-block;
+			cursor: pointer;
+			&:hover {
+				color: white;
+			}
+			&:before {
+				content: "/";
+				opacity: .6;
+				padding: 0 3px;
+			}
+			&:first-child:before {
+				content: none;
+			}
+		}
+	}
+
+	.list {
+		color: #fff;
+		li {
+			padding: 10px;
+			border-bottom: 1px solid #2B3740;
+		}
+		.count {
+			color: #40C2EA;
+			padding: 0 10px;
+		}
+	}
+
+	.stats {
+		.in, .out {
+			width: 50%;
+			float: left;
+			> div, > dl {
+				padding: 10px;
+				overflow: hidden;
+				border-bottom: 1px solid #E2E9EE;
+			}
+		}
+		.in {
+			> div, > dl {
+				border-right: 1px solid #E2E9EE;
+			}
+		}
+		.rate {
+			background: #53CDEC;
+			color: #1C87A2;
+			text-align: center;
+			border-color: white;
+			strong {
+				display: block;
+				font-size: 30px;
+				color: white;
+			}
+			h3 {
+				font-size: 11px;
+			}
+		}
+		dl {
+			dt {
+				width: 70%;
+				float: left;
+				clear: both;
+				color: #6F7F89;
+			}
+			dd {
+				width: 30%;
+				text-align: right;
+				float: right;
+				color: #40C2EA;
+			}
+		}
+	}
+
+}

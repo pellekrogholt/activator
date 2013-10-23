@@ -1,12 +1,15 @@
 /*
  Copyright (C) 2013 Typesafe, Inc <http://typesafe.com>
  */
-define(['text!./console.html', 'core/pluginapi', 'css!./console.css'], function(template, api){
+define(['core/model', 'text!./console.html', 'core/pluginapi', 'css!./console.css'], function(model, template, api){
   var ko = api.ko;
 
   var consoleConsole = api.PluginWidget({
     id: 'console-widget',
-    template: template
+    template: template,
+    init: function(parameters) {
+      this.atmosCompatible = model.snap.app.hasConsole;
+    }
   });
 
   return api.Plugin({

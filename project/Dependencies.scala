@@ -86,6 +86,7 @@ object Dependencies {
   val requireCss       = "org.webjars" % "require-css" % "0.0.7-3"
   val requireText      = "org.webjars" % "requirejs-text" % "2.0.10"
   val keymage          = "org.webjars" % "keymage" % "1.0.1"
+  val momentjs         = "org.webjars" % "momentjs" % "2.3.1"
 
 
   // Mini DSL

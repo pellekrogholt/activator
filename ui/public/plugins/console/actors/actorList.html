@@ -1,0 +1,107 @@
+<div>
+    <article class="table list actors" data-width="3">
+        <header>
+            <h1>Actors</h1>
+        </header>
+        <footer class="filters fiveFilters">
+            <p class="showing">
+                Showing <span class="itemsShown">?</span> of <span class="itemsTotal">?</span>
+            </p>
+            <p class="limit select" data-hover-text="Limit actor count">
+                <label>Limit</label>
+                <select>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                </select>
+            </p>
+            <div class="toggles menu">
+                <span>Toggles</span>
+                <ul>
+                    <li class="filterAnonymous">
+                        <label><input type="checkbox"> Hide anonymous actors</label>
+                    </li>
+                    <li class="showFullPath">
+                        <label><input type="checkbox"> Show full actor paths</label>
+                    </li>
+                </ul>
+            </div>
+            <p class="search input" data-hover-text="Filter by name">
+                <input type="text" placeholder="*"><span class="clear"></span>
+            </p>
+            <p class="viewmode select" data-hover-text="View mode">
+                <select>
+                    <option value="table">Table</option>
+                    <option value="tree">Tree</option>
+                </select>
+            </p>
+        </footer>
+        <section class="wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <span data-sort-by="actorPath" data-sort-by-alt="actorName">Actor</span>
+                    </th>
+                    <th class="right">
+                        <span data-sort-by="throughput">Throughput</span>
+                    </th>
+                    <th class="right">
+                        <span data-sort-by="maxTimeInMailbox">Max Mailbox Time</span>
+                    </th>
+                    <th class="right">
+                        <span data-sort-by="maxMailboxSize">Max Mailbox Size</span>
+                    </th>
+                    <th class="right">
+                        <span data-sort-by="deviation">Deviations</span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="listing">
+                    <tr>
+                        <td class="name"><a></a></td>
+                        <td class="throughput right"><a></a></td>
+                        <td class="maxTimeInMailbox right"><a></a></td>
+                        <td class="maxMailboxSize right"><a></a></td>
+                        <td class="right"><a><span class="deviation-counter"></span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </article>
+    <article class="tree actors" data-width="2">
+        <header>
+            <h1>Actors</h1>
+        </header>
+        <footer class="filters fourFilters">
+            <p class="showing">
+                Showing <span class="itemsShown">?</span> of <span class="itemsTotal"></span>
+            </p>
+            <p class="limit select" data-hover-text="Limit actor count">
+                <label>Limit</label>
+                <select>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                </select>
+            </p>
+            <p class="filterAnonymous">
+                <label><input type="checkbox"> Hide anonymous</label>
+            </p>
+
+            <p class="viewmode select" data-hover-text="View mode">
+                <select>
+                    <option value="table">Table</option>
+                    <option value="tree">Tree</option>
+                </select>
+            </p>
+        </footer>
+        <section class="wrapper">
+            <ul class="treeListing actors"></ul>
+        </section>
+    </article>
+</div>

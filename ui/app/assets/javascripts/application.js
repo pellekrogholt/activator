@@ -12,7 +12,8 @@ require.config({
   },
   paths: {
     core:    'javascripts/core',
-    plugins:  'plugins'
+    plugins: 'plugins',
+    console: 'plugins/console'
   }
 });
 
@@ -32,7 +33,7 @@ var startApp = function() {
       'core/utils',
       'core/sbt'
     ], function() {
-      require(['core/snap'])
+      require(['core/snap', 'console/main'])
     })
   })
 }

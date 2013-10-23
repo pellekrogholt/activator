@@ -95,7 +95,7 @@ object TheActivatorBuild extends Build {
   lazy val ui = (
     ActivatorPlayProject("ui")
     dependsOnRemote(
-      webjarsPlay3, requirejs, jquery, knockout, ace, requireCss, requireText, keymage,
+      webjarsPlay3, requirejs, jquery, knockout, ace, requireCss, requireText, keymage, momentjs,
       commonsIo, mimeUtil, slf4jLog4j,
       sbtLauncherInterface % "provided",
       sbtrcRemoteController % "compile;test->test",
